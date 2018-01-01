@@ -3069,8 +3069,8 @@ int GDALPDFWriter::WriteOGRFeature(GDALPDFLayerDesc& osVectorDesc,
 
         VSIFPrintfL(fp, "%f %f %f %f %f %f Tm\n",
                     cos(dfTextAngle) * adfMatrix[1] * dfTextStretch,
-                    sin(dfTextAngle) * adfMatrix[3],
-                    -sin(dfTextAngle) * adfMatrix[1] * dfTextStretch,
+                    sin(dfTextAngle) * adfMatrix[3] * dfTextStretch,
+                    -sin(dfTextAngle) * adfMatrix[1],
                     cos(dfTextAngle) * adfMatrix[3],
                     dfX, dfY);
 

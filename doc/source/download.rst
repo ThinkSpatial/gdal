@@ -10,8 +10,58 @@ Download
        :depth: 3
        :backlinks: none
 
-Current Release
+Binaries
 ------------------------------------------------------------------------------
+
+The GDAL project itself does not produce regular downloadable binaries
+(executables) for each release. However, a variety of efforts do produce
+ready to use binaries.
+
+See **https://trac.osgeo.org/gdal/wiki/DownloadingGdalBinaries** for a list
+of sources for downloading GDAL binary packages for Windows, macOS and Linux.
+
+.. _conda:
+
+Conda
+................................................................................
+
+`Conda <https://anaconda.org>`__ can be used on multiple platforms (Windows, macOS, and Linux) to
+install software packages and manage environments. Conda packages for GDAL are
+available at https://anaconda.org/conda-forge/gdal.
+
+.. only:: html
+
+    Latest version: |Conda badge|
+
+    .. |Conda badge| image:: https://anaconda.org/conda-forge/gdal/badges/version.svg
+        :target: https://anaconda.org/conda-forge/gdal
+
+::
+
+    conda install [-c channel] [package...]
+
+
+::
+
+    conda install -c conda-forge gdal
+
+
+Linux Docker images
+................................................................................
+
+Images with nightly builds of GDAL master and tagged releases are available at
+`Docker Hub <https://hub.docker.com/r/osgeo/gdal/tags>`_
+
+Information on the content of the different configurations can be found at
+`https://github.com/OSGeo/gdal/tree/master/docker <https://github.com/OSGeo/gdal/tree/master/docker>`_
+
+Source Code
+------------------------------------------------------------------------------
+
+You can download source packages for current and previous GDAL versions.
+
+Current Release
+................................................................................
 
 * **2022-07-06** `gdal-3.5.1.tar.gz`_ `3.5.1 Release Notes`_ (`3.5.1 md5`_)
 
@@ -20,7 +70,7 @@ Current Release
 .. _`3.5.1 md5`: https://github.com/OSGeo/gdal/releases/download/v3.5.1/gdal-3.5.1.tar.gz.md5
 
 Past Releases
-------------------------------------------------------------------------------
+................................................................................
 
 * **2022-05-13** `gdal-3.5.0.tar.gz`_ `3.5.0 Release Notes`_ (`3.5.0 md5`_)
 
@@ -178,7 +228,7 @@ Past Releases
 .. _source:
 
 Development Source
-------------------------------------------------------------------------------
+................................................................................
 
 The main repository for GDAL is located on github at
 https://github.com/OSGeo/GDAL.
@@ -191,8 +241,12 @@ command
     git clone https://github.com/OSGeo/GDAL.git
 
 
+Building GDAL
+................................................................................
+
+
 Build requirements
-..................
+~~~~~~~~~~~~~~~~~~
 
 To build GDAL 3 or later, you need *at a minimum* a C++11 compatible compiler, and
 `PROJ 6 or later <https://proj.org>`_.
@@ -202,69 +256,12 @@ dependencies.
 
 
 Build instructions
-..................
+~~~~~~~~~~~~~~~~~~
 
 See https://trac.osgeo.org/gdal/wiki/BuildHints for hints for existing
 autoconf and nmake build systems.
 
 From GDAL 3.5, an *experimental* :ref:`CMake-based build <build_hints>` is available.
-
-
-Binaries
-------------------------------------------------------------------------------
-
-In this section we list a number of the binary distributions of GDAL
-all of which should have fully reproducible open source build recipes.
-
-Windows
-................................................................................
-
-Windows builds are available via `Conda Forge`_ (64-bit only). See the
-:ref:`conda` section for more detailed information.
-
-.. _`Conda Forge`: https://anaconda.org/conda-forge/gdal
-
-Debian
-................................................................................
-
-Debian packages are now available on `Debian Unstable`_.
-
-.. _`Debian Unstable`: https://tracker.debian.org/pkg/gdal
-
-.. _conda:
-
-Conda
-................................................................................
-
-`Conda <https://anaconda.org>`__ can be used on multiple platforms (Windows, macOS, and Linux) to
-install software packages and manage environments. Conda packages for GDAL are
-available at https://anaconda.org/conda-forge/gdal.
-
-.. only:: html
-
-    Latest version: |Conda badge|
-
-    .. |Conda badge| image:: https://anaconda.org/conda-forge/gdal/badges/version.svg
-        :target: https://anaconda.org/conda-forge/gdal
-
-::
-
-    conda install [-c channel] [package...]
-
-
-::
-
-    conda install -c conda-forge gdal
-
-
-Linux Docker images
-................................................................................
-
-Images with nightly builds of GDAL master and tagged releases are available at
-`Docker Hub <https://hub.docker.com/r/osgeo/gdal/tags>`_
-
-Information on the content of the different configurations can be found at
-`https://github.com/OSGeo/gdal/tree/master/docker <https://github.com/OSGeo/gdal/tree/master/docker>`_
 
 .. toctree::
    :maxdepth: 0
